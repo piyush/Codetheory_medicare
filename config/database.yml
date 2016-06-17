@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: utkarsh
+  host: localhost
+  port: 5432
+  pool: 10
+
+
+development:
+  <<: *default
+  database: medicare
+
+test:
+  <<: *default
+  database: medicare
+
+production:
+  <<: *default
+  database: medicare
